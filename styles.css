@@ -1,0 +1,137 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.cards > div {
+  padding: 10px;
+  background-color: #e3e3e3;
+  border-radius: 3px;
+  box-shadow: 1px 1px 8px grey;
+  font-family: system-ui;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+  gap: 1.5rem;
+}
+
+/* @media(min-width: 50em) {
+  .grid-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-cards section:last-child {
+    grid-column-start: 4;
+    grid-row: 1 / 3;
+  }
+
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+} */
+
+.grid-cards > section:nth-child(1) {
+  grid-area: one;
+}
+
+.grid-cards > section:nth-child(2) {
+  grid-area: two;
+}
+
+.grid-cards > section:nth-child(3) {
+  grid-area: three;
+}
+
+.grid-cards > section:nth-child(4) {
+  grid-area: four;
+}
+
+.grid-cards > section:nth-child(5) {
+  grid-area: five;
+}
+
+@media(min-width: 50em) {
+  .grid-cards {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+}
+
+@media(min-width: 30em) {
+  .grid-cards {
+    grid-template-areas:
+      'one one'
+      'two five'
+      'three five'
+      'four four';
+  }
+}
+
+@media(min-width: 50em) {
+  .grid-cards {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+}
+
+
+.grid-cards section {
+  min-height: 30px;
+  width: 100%;
+}
+
+.sec-1 {
+  background-color: grey;
+}
+
+.sec-2 {
+  background-color: red;
+}
+
+.sec-3 {
+  background-color: purple;
+}
+
+.sec-4 {
+  background-color: blue;
+}
+
+.sec-5 {
+  background-color: yellow;
+}
+
+.test-grid {
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.test-grid > section {
+  min-height: 30px;
+  min-width: 100px;
+}
+
+.grid-1 {
+  /* grid-area: two; */
+  grid-column: 3 / 11;
+  background-color: wheat;
+}
+
+.grid-2 {
+  grid-column: 3 / 11;
+  /* grid-area: four; */
+  background-color: red;
+}
